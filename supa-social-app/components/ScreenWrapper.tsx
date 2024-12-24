@@ -21,8 +21,7 @@ const styles = StyleSheet.create({
   },
 });
 
-interface Props
-  extends PropsWithChildren,
-    Readonly<{
-      bg?: string;
-    }> {}
+type Props = PropsWithChildren &
+  Readonly<{
+    bg?: string;
+  }>;
