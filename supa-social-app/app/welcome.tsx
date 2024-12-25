@@ -4,8 +4,11 @@ import { ScreenWrapper, Button } from "@/components/";
 import { StatusBar } from "expo-status-bar";
 import { hp, wp } from "@/helpers/common";
 import { theme } from "@/constants/theme";
+import { useRouter } from "expo-router";
 
 const Welcome = () => {
+  const router = useRouter();
+
   return (
     <ScreenWrapper bg="white">
       <StatusBar style="dark" />
@@ -30,12 +33,12 @@ const Welcome = () => {
           <Button
             title="Getting Started"
             buttonStyle={{ marginHorizontal: wp(3) }}
-            onPress={() => {}}
+            onPress={() => router.push("/signUp")}
           />
         </View>
         <View style={styles.bottomTextContainer}>
           <Text style={styles.loginText}>Already Have An Account!</Text>
-          <Pressable>
+          <Pressable onPress={() => router.push("/login")}>
             <Text
               style={[
                 styles.loginText,
