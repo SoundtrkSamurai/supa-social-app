@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { SvgProps, Circle, Path } from "react-native-svg";
 
-const CircleArrowLeft02Icon = ({ color, strokeWidth, ...props }: SvgProps) => (
+const ArrowLeft = ({ color, strokeWidth, ...props }: SvgProps) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -28,4 +28,4 @@ const CircleArrowLeft02Icon = ({ color, strokeWidth, ...props }: SvgProps) => (
   </Svg>
 );
 
-export default CircleArrowLeft02Icon;
+export default ArrowLeft;
