@@ -3,13 +3,20 @@ import React from "react";
 import { ScreenWrapper } from "@/components";
 import { theme } from "@/constants/theme";
 import Icon from "@/assets/icons";
+import { StatusBar } from "expo-status-bar";
+import BackButton from "@/components/BackButton";
+import { useRouter } from "expo-router";
 
 const login = () => {
+  const router = useRouter();
+
   return (
     <ScreenWrapper>
       <View style={styles.container}>
-        <Text>Login</Text>
-        <Icon name="home" color="#ff0000" />
+        <StatusBar style="dark" />
+        <View style={styles.container}>
+          <BackButton router={router} />
+        </View>
       </View>
     </ScreenWrapper>
   );

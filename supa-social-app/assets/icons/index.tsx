@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { Component } from "react";
 import Home from "./Home";
+import ArrowLeft from "./ArrowLeft";
 import { SvgProps } from "react-native-svg";
 import { theme } from "@/constants/theme";
 
 const icons: Record<string, (props: SvgProps) => JSX.Element> = {
+  arrowLeft: ArrowLeft,
   home: Home,
 };
 
