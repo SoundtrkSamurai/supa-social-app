@@ -25,15 +25,17 @@ export function useOnSignUp({
     } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        data: {
+          name,
+        },
+      },
     });
-    
+
     setLoading(false);
 
-    console.log('sessions: ',session);
-    console.log('error: ', error);
-
     if (error) {
-      Alert.alert('Sign up error', error.message);
+      Alert.alert("Sign up error", error.message);
     }
   }, [emailRef, passwordRef, nameRef]);
 }
