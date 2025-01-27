@@ -8,15 +8,15 @@ import { useOnSignUp } from "@/hooks/useOnSingup";
 import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { useRef, useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 
 const SignUp = () => {
   const emailRef = useRef("");
   const nameRef = useRef("");
   const passwordRef = useRef("");
   const router = useRouter();
-  const onSignUp = useOnSignUp({ emailRef, passwordRef, nameRef });
   const [loading, setLoading] = useState(false);
+  const onSignUp = useOnSignUp({ emailRef, passwordRef, nameRef, setLoading });
 
   return (
     <ScreenWrapper bg="white">

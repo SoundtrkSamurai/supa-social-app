@@ -14,8 +14,8 @@ const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const router = useRouter();
-  const onLogin = useOnLogin({ emailRef, passwordRef });
   const [loading, setLoading] = useState(false);
+  const onLogin = useOnLogin({ emailRef, passwordRef, setLoading });
 
   return (
     <ScreenWrapper bg="white">

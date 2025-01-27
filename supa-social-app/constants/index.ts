@@ -1,5 +1,6 @@
+import { supabaseAnonKey, supabaseUrl } from "./api";
 import { theme } from "./theme";
-
-export { 
-  theme,
-}
+ 
+export {
+  supabaseAnonKey, supabaseUrl, theme
+};
